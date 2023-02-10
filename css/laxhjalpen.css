@@ -1,0 +1,487 @@
+/* 
+==================================================================================
+Global rules
+================================================================================== 
+*/
+
+html {
+    margin: 2%;
+}
+body {
+    margin: auto;
+    max-width: 860px;
+    font-family: "Helvetica Neue", "Liberation Sans", Calibri, Arial, sans-serif ;
+    font-size: 1rem;
+}
+
+
+
+/*
+==================================================================================
+Rules for reusable components
+==================================================================================
+*/
+.dborder {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+article{
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    border-bottom: 3px double #00af64;
+}
+article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+figure {
+    float: left;
+    margin: 0;
+}
+figure img {
+    width: 128px;
+    height: 128px;
+}
+figcaption {
+    font: italic bolder 110% sans-serif;
+    font-family: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    color: #666;
+}
+article p {
+    margin-left: 140px;
+    hyphens: auto;
+}
+
+/*
+==================================================================================
+Page header, all pages
+==================================================================================
+*/
+header {
+    text-align: center;
+}
+.tagline{
+    font-size: 120%;
+    padding: 0.5rem;
+    border-top: 3px double #00AF64;
+    border-bottom: 3px double #00AF64;
+    margin: 1rem 0;
+
+}
+h1 {
+    font-family: "Merienda One", cursive;
+}
+h1::first-letter {
+    color: #00AF64;
+}
+/*
+==================================================================================
+Page footer rules
+==================================================================================
+*/
+footer{
+    margin-top: 3rem;
+    text-align: center;
+    color: #999;
+}
+
+/*
+==================================================================================
+Main site navigation
+==================================================================================
+*/
+
+.menu > li, .menu > h2{
+    margin: 0 0 1rem;
+    padding: 2rem 0;
+    background-color: #F5F5F5;
+    text-align: center;
+    box-shadow: inset 0 0 20px #007241;
+    border-radius: 50%;
+    font-family: "Merienda One", cursive;
+}
+.menu a:link, .menu a:visited {
+    text-decoration: none;
+    color: #000;
+}
+.menu a:focus, .menu a:hover {
+    text-decoration: underline;
+    color: #A62F00;
+}
+.menu a:active {
+    text-decoration: underline;
+    color: #FF4900;
+}
+.menu {
+    margin: 1em 0;
+    padding: 0;
+}
+.menu li {
+    margin: 0 0 1rem;
+    list-style: none;
+}
+
+
+/*
+==================================================================================
+Start page rules
+==================================================================================
+*/
+
+.startpage h1{
+    font-size: 5rem;
+}
+.startpage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.startpage header, .startpage footer{
+    flex: 0 0 100%;
+}
+.startpage section{
+    flex: 0 0 22%;
+}
+.startpage .logo {
+    width: 235px;
+    height: 198px;
+}
+.hwrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.hwrap > a {
+    margin-right: 30px;
+}
+
+/*
+==================================================================================
+Subpages
+==================================================================================
+*/
+.subpage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.subpage header, .subpage footer {
+    flex: 0 0 100%;
+}
+.subpage .logo {
+    width: 146px;
+    height: 123px;
+}
+.subpage h1 {
+    font-size: 2.6rem;
+}
+h1 > span {
+    color: #A62F00;
+}
+.subpage .hwrap {
+    justify-content: space-between;
+}
+.subpage .hwrap > a, nav {
+    flex: 0 1 20%;
+    min-width: 146px;
+    margin-right: 10px;
+}
+.subpage .hwrap > h1, div[role=main] {
+    flex: 1 1 300px;
+}
+
+/*
+==================================================================================
+Tables
+==================================================================================
+*/
+
+table {
+    border-spacing: 0;
+    border: 1px solid #d3d3d3;
+    width: 96%;
+    margin: 1em auto 2em;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+thead {
+    font-size: 150%;
+    text-shadow: #fff 1px 1px 1px;
+}
+th, td {
+    padding: 1.1rem 1.8rem 1.1rem;
+}
+th {
+    padding-top: 1.4rem;
+    background: #ddd;
+    text-align: left;
+}
+td {
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+th:not(last-child) {
+    border-right: 1px solid #f2f2f2;
+}
+tr:target {
+    background-color: #61d7a4;
+}
+tr:hover{
+    background-color: #ff9b73;
+}
+tr {
+    transition: background-color 1s;
+}
+td:nth-child(1){
+    width: 50px;
+}
+td:nth-child(2){
+    width: 50px;
+}
+
+/*
+==================================================================================
+Nivo Slider
+==================================================================================
+*/
+
+.nivo-caption {
+    text-align: center;
+}
+
+/*
+==================================================================================
+Forms (contact page)
+==================================================================================
+*/
+
+
+/* .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} */
+
+
+fieldset {
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+legend{
+    font-size: larger;
+}
+form p {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+label {
+    flex: 0 1 10ch;
+    text-align: right;
+    padding-right: 1ch;
+}
+
+.reqfield {
+    flex: 0 0 2ch;
+    order: 1;
+    text-align: center;
+    padding-right: 0;
+}
+
+input[type=text], input[type=email], textarea {
+    flex: 1 1 25ch;
+    max-width: 300px;
+}
+textarea {
+    height: 5em;
+    resize: vertical;
+}
+input[type="submit"] {
+    display: block;
+    margin: auto;
+}
+
+.subpage .hwrap, form{
+    flex: 1 1 300px;
+}
+
+
+
+/*
+==================================================================================
+Blog page, show and edit
+==================================================================================
+*/
+
+
+
+/*
+==================================================================================
+Adaptive design
+==================================================================================
+*/
+.tagline button {
+    display: none; /*Aktivera*/
+}
+
+@media (max-width: 850px) {
+
+    .work nav, .work div[role=main] {
+        flex: 0 0 100%;
+        margin: 0;
+    }
+    .work .tagline {
+        margin: 0.5em 0 0.2em;
+        text-align: right;
+    }
+    .work .tagline button {
+        display: inline;
+    }
+    .work .menu > li {
+        margin: 0 0 0.2em;
+        padding: 0.4em 0;
+        box-shadow: inset 0 0 10px #007241;
+        border-radius: 1em;
+    }
+    .work .menu {
+        margin: 0 0.1em;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+    }
+    .work .menu.show {
+        max-height: 165px;
+    }
+
+
+}
+
+@media (max-width: 750px) {
+
+    .hwrap > a {
+        margin-right: 25px;
+    }
+    .startpage .logo {
+        width: 209px;
+        height: 176px;
+    }
+    .startpage > header h1 {
+        font-size: 110%;
+    }
+    p.tagline {
+        font-size: 400%;
+    }
+    .startpage section {
+        flex: 0 0 44%;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .hwrap > a {
+        margin-right: 20px;
+    }
+    .startpage .logo {
+        width: 183px;
+        height: 154px;
+    }
+    .startpage > header h1 {
+        font-size: 350%;
+    }
+    p.tagline {
+        font-size: 105%;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .hwrap > a {
+        margin-right: 15px;
+    }
+    .startpage .logo {
+        width: 157px;
+        height: 132px;
+    }
+    .subpage .logo {
+        width: 116px;
+        height: 98px;
+    }
+    .subpage h1 {
+        font-size: 2.1rem;
+    }
+    nav, div[role=main] {
+        flex: 0 0 100%;
+        margin: 0;
+    }
+    .subpage .tagline {
+        margin: 0.5em 0 0.2em;
+        text-align: right;
+    }
+    .tagline button {
+        display: inline;
+    }
+    .menu > li {
+        margin: 0 0 0.2em;
+        padding: 0.4em 0;
+        box-shadow: inset 0 0 10px #007241;
+        border-radius: 1em;
+    }
+    .subpage .menu {
+        margin: 0 0.1em;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+    }
+    .menu.show {
+        max-height: 165px;
+    }
+}
+
+@media (max-width: 476px) {
+
+    .subpage .hwrap a {
+        flex: 0 0 100%;
+    }
+    .hwrap h1 {
+        margin: 0.1em;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .startpage > header h1 {
+        font-size: 300%;
+    }
+    .startpage section {
+        flex: 0 0 100%;
+    }
+    figure {
+        float: none;
+        text-align: center;
+    }
+    figcaption {
+        width: 116px;
+        margin: auto;
+    }
+    article p {
+        margin-left: 0;
+    }
+    label {
+        flex: 0 0 auto;
+        text-align: left;
+        padding-right: 0;
+    }
+    .reqfield {
+        order: 0;
+    }
+    input[type=text], input[type=email], textarea {
+        flex: 0 0 100%;
+        margin-top: 3px;
+    }
+}
